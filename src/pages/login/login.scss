@@ -1,17 +1,12 @@
 page-login {
  
   .login-content {
-    background: #56CA96;
- 
-    .logo-row {
-      padding-top: 50px;
-      padding-bottom: 20px;
-    }
+    // background: #3df5e1;
  
     .login-box {
-      background: #399F8B;
-      padding: 20px 20px 0px 20px;
-      margin-top: 30px;
+      // background: #399F8B;
+      // padding: 20px 20px 0px 20px;
+      // margin-top: 30px;
     }
  
     ion-row {
@@ -20,7 +15,7 @@ page-login {
      }
  
      ion-item {
-         border-radius: 30px !important;
+        //  border-radius: 30px !important;
          padding-left: 30px !important;
          font-size: 0.9em;
          margin-bottom: 10px;
@@ -49,6 +44,22 @@ page-login {
        color: #ffffff;
        font-size: 0.8em;
      }
+  }
+
+  .list-ios > .item-block:first-child {
+    border-top: none;
+  }
+
+  .login-text {
+    // .item-md p {
+      color: #bdbdbd;
+      font-size: 1.1rem;
+    // }
+  }
+
+  .login-text1 {
+    margin: 30px 7px 23px 19px;
+    font-size: 17px;
   }
  
 }
