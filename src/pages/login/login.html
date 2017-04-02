@@ -1,32 +1,68 @@
-<ion-content padding>
-  <ion-row>
-    <ion-col></ion-col>
-    <ion-col width-20>
-      <img src="https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png"/>
-    </ion-col>
-    <ion-col></ion-col>
-  </ion-row>
-  <div class="login-box">
-    <p class="login-text1">
-      <b>
-        Please provide the access code to continue.
-      </b>
-    </p>
-    <form (ngSubmit)="login()" #registerForm="ngForm">
-      <ion-list style="margin-bottom: 0px;">
-        <ion-item>
-          <ion-input type="text" name="name" placeholder="Enter access code" [(ngModel)]="registerCredentials.email" required></ion-input>
+<ion-content>
+  <div>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col width-20>
+        <img src="https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png"/>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+    <div class="login-box">
+      <p class="login-text1">
+        <b>
+          Please provide the access code to continue.
+        </b>
+      </p>
+      <form (ngSubmit)="login()" #registerForm="ngForm">
+        <ion-list style="margin-bottom: 0px;">
+          <ion-item>
+            <ion-input type="text" name="name" placeholder="Enter access code" [(ngModel)]="registerCredentials.email" required></ion-input>
+          </ion-item>
+          <ion-item>
+            <p class="login-text">
+              Code is valid for 1 time user
+            </p>
+          </ion-item>
+        </ion-list>
+        <ion-row>
+          <ion-col col-3></ion-col>
+          <ion-col col-5 class="signup-col">
+            <button ion-button outline style=" width: 100%;" type="submit" [disabled]="!registerForm.form.valid">Submit</button>
+          </ion-col>
+        </ion-row>
+      </form>
+    </div>
+  </div>
+  <div class="mid-border" style="height: 0px;">
+    <hr style="margin-top: 50px;">
+    <div style="top: -33px;position: relative;left: 42%;">
+      <span style="top: 35%;position: relative;">Or</span></div>
+  </div>
+  <div style="padding-top: 40px;">
+    <p style="font-size:19px" text-center><b>
+      Log in DIY  
+    </b></p>
+    <form (ngSubmit)="login()" #loginForm="ngForm">
+      <ion-list>
+        <ion-item class="bottom-login">
+          <ion-label color="primary" floating>Email</ion-label>
+          <ion-input type="email" required></ion-input>
         </ion-item>
-        <ion-item>
-          <p class="login-text">
-            Code is valid for 1 time user
-          </p>
+        <ion-item class="bottom-login">
+          <ion-label color="primary" floating>Password</ion-label>
+          <ion-input type="password" required></ion-input>
         </ion-item>
       </ion-list>
       <ion-row>
         <ion-col col-3></ion-col>
         <ion-col col-5 class="signup-col">
-          <button ion-button outline style=" width: 100%;" type="submit" [disabled]="!registerForm.form.valid">Submit</button>
+          <button ion-button outline style=" width: 100%;" type="submit" [disabled]="!loginForm.form.valid">Log in</button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-3></ion-col>
+        <ion-col>
+          <a ui-sref="">Forgot Password?</a>
         </ion-col>
       </ion-row>
     </form>

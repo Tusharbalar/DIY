@@ -60,7 +60,7 @@ page-login {
   }
 
   .login-text1 {
-    margin: 30px 7px 23px 19px;
+    margin: 30px 7px 10px 19px;
     font-size: 17px;
   }
 
@@ -68,5 +68,23 @@ page-login {
     margin-left: 0px;
     font-size: 14px;
   }
- 
+ .mid-border {
+    div {
+      height: 50px;
+      width: 50px;
+      background-color: black;
+      color: white;
+      text-align: center;
+      border-radius: 100%;
+      span {
+
+      }
+    }
+  }
+  .list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+    border-bottom: none;
+}
+
+  .bottom-login {
+  }
 }
