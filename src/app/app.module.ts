@@ -23,7 +23,20 @@ import { AuthService } from '../providers/auth-service';
     LoginPage
   ],
   imports: [
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      platforms : {
+        ios : {
+          // These options are available in ionic-angular@2.0.0-beta.2 and up.
+          scrollAssist: false,    // Valid options appear to be [true, false]
+          autoFocusAssist: false , // Valid options appear to be ['instant', 'delay', false]
+          tabsPlacement: 'bottom' // default appearance of tab is bottom
+        },
+        android: {
+          tabsPlacement : 'bottom' // default appearance of tab is bottom
+        }
+        // http://ionicframework.com/docs/v2/api/config/Config/)
+      }
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
