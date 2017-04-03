@@ -14,7 +14,7 @@
         </b>
       </p>
       <form (ngSubmit)="login()" #registerForm="ngForm">
-        <ion-list style="margin-bottom: 0px;">
+        <ion-list style="margin-bottom: 0px;" class="no-border">
           <ion-item>
             <ion-input type="text" name="name" placeholder="Enter access code" [(ngModel)]="registerCredentials.email" required></ion-input>
           </ion-item>
@@ -45,11 +45,11 @@
     <form (ngSubmit)="login()" #loginForm="ngForm">
       <ion-list>
         <ion-item class="bottom-login">
-          <ion-label color="primary" floating>Email</ion-label>
+          <ion-label color="primary" stacked>Email</ion-label>
           <ion-input type="email" required></ion-input>
         </ion-item>
         <ion-item class="bottom-login">
-          <ion-label color="primary" floating>Password</ion-label>
+          <ion-label color="primary" stacked>Password</ion-label>
           <ion-input type="password" required></ion-input>
         </ion-item>
       </ion-list>
