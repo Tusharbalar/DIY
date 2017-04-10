@@ -9,6 +9,7 @@ import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
 import { VerifyPage } from '../pages/signup/verify/verify';
 import { EmailVerifyPage } from '../pages/signup/email-verify/verify';
+import { MyLifePlanPage } from '../pages/my-life-plan/plan';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +27,8 @@ import { AuthService } from '../providers/auth-service';
     LoginPage,
     SignupPage,
     VerifyPage,
-    EmailVerifyPage
+    EmailVerifyPage,
+    MyLifePlanPage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
@@ -54,7 +56,8 @@ import { AuthService } from '../providers/auth-service';
     LoginPage,
     SignupPage,
     VerifyPage,
-    EmailVerifyPage
+    EmailVerifyPage,
+    MyLifePlanPage
   ],
   providers: [
     StatusBar,
