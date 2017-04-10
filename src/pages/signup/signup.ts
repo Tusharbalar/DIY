@@ -11,4 +11,9 @@ export class SignupPage {
 
   signup = {};
 
+  aa() {
+    console.log("yesss");
+    this.signup["mobile"] = "+1 ";
+  }
+
 }

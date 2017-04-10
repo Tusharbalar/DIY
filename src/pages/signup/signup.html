@@ -47,11 +47,11 @@
             </ion-item>
             <ion-item>
               <ion-label color="primary" stacked>Mobile number</ion-label>
-              <ion-input type="number" name="mobile" [(ngModel)]="signup.mobile" required></ion-input>
+              <ion-input type="text" (focus)="aa()" name="mobile" [(ngModel)]="signup.mobile" required></ion-input>
             </ion-item>
             <ion-item>
               <ion-checkbox required></ion-checkbox>
-              <ion-label>By tapping Sign up, you agree to the Privacy policy</ion-label>
+              <ion-label><p>By tapping Sign up, you agree to the <a ui-href="">Privacy policy</a></p></ion-label>
             </ion-item>
             <ion-row>
               <ion-col col-3></ion-col>
