@@ -17,7 +17,7 @@
       </p>
       <div>
         <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
-          <ion-list radio-group>
+          <ion-list radio-group [(ngModel)]="signup.gender" name="aa" required>
             <ion-card-content>
               <b>
                 Select gender
@@ -25,11 +25,11 @@
             </ion-card-content>
             <ion-item>
               <ion-label>Male</ion-label>
-              <ion-radio value="Male" required></ion-radio>
+              <ion-radio value="Male"></ion-radio>
             </ion-item>
             <ion-item>
               <ion-label>Female</ion-label>
-              <ion-radio value="Female" required></ion-radio>
+              <ion-radio value="Female"></ion-radio>
             </ion-item>
           </ion-list>
           <ion-list>
