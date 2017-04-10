@@ -50,16 +50,17 @@
               <ion-input type="text" (focus)="aa()" name="mobile" [(ngModel)]="signup.mobile" required></ion-input>
             </ion-item>
             <ion-item>
-              <ion-checkbox required></ion-checkbox>
+              <ion-checkbox [(ngModel)]="signup.privacy" name="privacy" required></ion-checkbox>
               <ion-label><p>By tapping Sign up, you agree to the <a ui-href="">Privacy policy</a></p></ion-label>
             </ion-item>
             <ion-row>
               <ion-col col-3></ion-col>
               <ion-col col-5 class="signup-col">
-                <button ion-button outline style="width: 100%;" type="submit" [disabled]="!signupForm.form.valid">    Proceed
+                <button ion-button outline style="width: 100%;" type="submit" [disabled]="!signupForm.form.valid">
+                  Proceed
                 </button>
               </ion-col>
-            </ion-row>
+            </ion-row> 
           </ion-list>
         </form>
       </div>
