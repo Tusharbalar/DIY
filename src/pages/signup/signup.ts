@@ -27,6 +27,17 @@ export class SignupPage {
     });
   }
 
+  logos = [
+    { 'name':'people' },
+    { 'name':'logo-twitter' }, 
+    { 'name': 'close' }
+  ];
 
+  name;
+
+  iconClick(logo) {
+    this.name = logo.name;
+    console.log(logo)
+  }
 
 }

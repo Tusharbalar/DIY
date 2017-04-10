@@ -12,9 +12,10 @@
         <b>
           Sign Up
         </b><br/>
-        Select avatar<br/>
-        <ion-icon name="ios-home-outline"></ion-icon>
-      </p>
+        Select avatar<br/></p>
+        <div *ngFor="let logo of logos">
+          <ion-icon name="{{logo.name}}" (click)="iconClick(logo)" [ngClass]="{'mine': logo.name == name}"></ion-icon>
+        </div> 
       <div>
         <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
           <ion-list radio-group [(ngModel)]="signup.gender" name="aa" required>
