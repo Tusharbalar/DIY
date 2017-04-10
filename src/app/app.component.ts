@@ -25,7 +25,7 @@ export class MyApp {
   setHomePage() {
     let isEmailVerified = localStorage.getItem("emailVerify");
     if (isEmailVerified === "true") {
-      this.rootPage = MyLifePlanPage;
+      this.rootPage = TabsPage;
     } else if(isEmailVerified == "Not") {
       this.rootPage = EmailVerifyPage;
     } else {
