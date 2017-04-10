@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { LoginPage } from '../pages/login/login';
 import { SignupPage } from '../pages/signup/signup';
+import { VerifyPage } from '../pages/signup/verify/verify';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -22,7 +23,8 @@ import { AuthService } from '../providers/auth-service';
     HomePage,
     TabsPage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    VerifyPage
   ],
   imports: [
     IonicModule.forRoot(MyApp, {
@@ -48,7 +50,8 @@ import { AuthService } from '../providers/auth-service';
     HomePage,
     TabsPage,
     LoginPage,
-    SignupPage
+    SignupPage,
+    VerifyPage
   ],
   providers: [
     StatusBar,
