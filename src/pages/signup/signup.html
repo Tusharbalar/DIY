@@ -8,42 +8,20 @@
   <ion-item no-lines>
     Select avatar
     <div class="select-avatar">
-      <div class="avatar-icon">
-        <ion-icon name="person"></ion-icon>
+      <div class="avatar-icon" *ngFor="let logo of logos">
+        <ion-icon name="{{logo.name}}" (click)="iconClick(logo)" [ngClass]="{'mine': logo.name == name}"></ion-icon>
       </div>
-      <div class="avatar-icon">
-        <ion-icon name="bicycle"></ion-icon>
-      </div>
-      <div class="avatar-icon">
-        <ion-icon name="body"></ion-icon>
-      </div>
-      <div class="avatar-icon">
-        <ion-icon name="contact"></ion-icon>
-      </div>
-      <div class="avatar-icon">
-        <ion-icon name="contacts"></ion-icon>
-      </div>
-      <div class="avatar-icon">
-        <ion-icon name="eye"></ion-icon>
-      </div>
-      <div class="avatar-icon">
-        <ion-icon name="happy"></ion-icon>
-      </div>
-      <div class="avatar-icon">
-        <ion-icon name="ionitron"></ion-icon>
-      </div>
-      <div class="avatar-icon">
-        <ion-icon name="man"></ion-icon>
-      </div>
-      <div class="avatar-icon">
-        <ion-icon name="octocat"></ion-icon>
-      </div>
-      <div class="avatar-icon">
-        <ion-icon name="python"></ion-icon>
-      </div>
-      <div class="avatar-icon">
-        <ion-icon name="reddit"></ion-icon>
-      </div>
+    </div>
+    
+    <div class="login-box">
+      <p class="login-text1">
+        <b>
+          Sign Up
+        </b><br/>
+        Select avatar<br/></p>
+        <div *ngFor="let logo of logos">
+          <ion-icon name="{{logo.name}}" (click)="iconClick(logo)" [ngClass]="{'mine': logo.name == name}"></ion-icon>
+        </div> 
     </div>
   </ion-item>
   <form (ngSubmit)="onSubmit()" #signupForm="ngForm">
