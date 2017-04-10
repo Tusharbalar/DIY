@@ -22,7 +22,9 @@ export class SignupPage {
   }
 
   onSubmit() {
-    this.navCtrl.push(VerifyPage);
+    this.navCtrl.push(VerifyPage, {
+      signup: this.signup
+    });
   }
 
 

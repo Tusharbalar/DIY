@@ -3,5 +3,36 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding>
-  <h3>Verify Page</h3>
+  <ion-row>
+    <ion-col></ion-col>
+    <ion-col width-20>
+      <img src="https://raw.githubusercontent.com/reactjs/redux/master/logo/logo.png"/>
+    </ion-col>
+    <ion-col></ion-col>
+  </ion-row>
+
+  <h3>OTP has sent to you on your mobile number {{mobile}}</h3>
+  <ion-list>
+    <ion-item>
+      <ion-label stacked>
+        Enter OTP
+      </ion-label>
+      <ion-input type="number" name="otp" [(ngModel)]="otp"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col col-3></ion-col>
+      <ion-col col-5 class="signup-col">
+        <button ion-button outline style="width: 100%;" type="button" (click)="emailVerify()" [disabled]="!otp"> Verify </button>
+      </ion-col>
+    </ion-row>
+  </ion-list>
+
+  <ion-list>
+    <ion-row>
+      <ion-col col-3></ion-col>
+      <ion-col col-5 class="signup-col">
+        Resend OTP
+      </ion-col>
+    </ion-row>
+  </ion-list>
 </ion-content>
