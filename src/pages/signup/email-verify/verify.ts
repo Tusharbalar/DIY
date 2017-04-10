@@ -14,7 +14,7 @@ export class EmailVerifyPage {
 
   constructor(public navParams: NavParams,
               public navCtrl: NavController) {
-    this.email = navParams.get("email").mobile;
+    this.email = navParams.get("email");
     console.log("DSDS", this.email)
   }
 
