@@ -15,7 +15,24 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-.mine {
-  color: red;
-  font-size: 20px;
+.center{
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
 }
+
+.header-logo{
+    width: 60px;
+    margin-top: 15px;
+}
+
+.paragraph{
+  white-space: pre-line;
+}
+
+.underline{
+  text-decoration: underline;
+}
+    .mine {  
+      color: #387ef5;
+    }  
