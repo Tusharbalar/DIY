@@ -9,4 +9,6 @@ import { AuthService } from '../../providers/auth-service';
 
 export class SignupPage {
 
+  signup = {};
+
 }

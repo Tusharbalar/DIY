@@ -15,23 +15,53 @@
         Select avatar<br/>
         <ion-icon name="ios-home-outline"></ion-icon>
       </p>
-
       <div>
-        <ion-list radio-group>
-          <ion-card-content>
-            <b>
-              Select gender
-            </b>
-          </ion-card-content>
-          <ion-item>
-            <ion-label>Male</ion-label>
-            <ion-radio value="Male"></ion-radio>
-          </ion-item>
-          <ion-item>
-            <ion-label>Female</ion-label>
-            <ion-radio value="Female"></ion-radio>
-          </ion-item>
-        </ion-list>
+        <form (ngSubmit)="signup()" #signupForm="ngForm">
+          <ion-list radio-group>
+            <ion-card-content>
+              <b>
+                Select gender
+              </b>
+            </ion-card-content>
+            <ion-item>
+              <ion-label>Male</ion-label>
+              <ion-radio value="Male" required></ion-radio>
+            </ion-item>
+            <ion-item>
+              <ion-label>Female</ion-label>
+              <ion-radio value="Female" required></ion-radio>
+            </ion-item>
+          </ion-list>
+          <ion-list>
+            <ion-item>
+              <ion-label color="primary" stacked>Avatar name</ion-label>
+              <ion-input type="text" name="name" [(ngModel)]="signup.name" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="primary" stacked>Email</ion-label>
+              <ion-input type="email" name="email" [(ngModel)]="signup.email" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="primary" stacked>password</ion-label>
+              <ion-input type="password" name="password" [(ngModel)]="signup.password" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label color="primary" stacked>Mobile number</ion-label>
+              <ion-input type="number" name="mobile" [(ngModel)]="signup.mobile" required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-checkbox required></ion-checkbox>
+              <ion-label>By tapping Sign up, you agree to the Privacy policy</ion-label>
+            </ion-item>
+            <ion-row>
+              <ion-col col-3></ion-col>
+              <ion-col col-5 class="signup-col">
+                <button ion-button outline style="width: 100%;" type="submit" [disabled]="!signupForm.form.valid">    Proceed
+                </button>
+              </ion-col>
+            </ion-row>
+          </ion-list>
+        </form>
       </div>
     </div>
   </div>
